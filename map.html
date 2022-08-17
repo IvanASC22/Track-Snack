@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8">
+        <title>Track & Snack Map</title>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <script defer src="data.js"></script>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head> 
+ 
+    <body>
+            <!-- NAV BAR -->
+        <nav> 
+            <a href="#" >
+                <img id ="logo" src="images/small.png" height="50px">
+            </a>
+    
+
+            <div class="dropdown">
+                <div class="drop-element"><a class="us" href="index.html">Main Menu</a></div>
+                
+            </div>
+
+
+            <div class="dropdown">
+                <div class="drop-element"><a class="us" href="about.html">About Us</a></div>
+            </div>
+    
+            <div class="dropdown">    <!--Posibbly put on map page to show restaurants there-->
+                <div class="drop-element"><a class="us">Restaurants</a></div>
+                <div class="about-content">
+                    <a href="restaurants_near.html">Near Me</a>
+                    <a href="restaurants_expensive.html">Most Expensive</a>
+                    <a href="restaurant_budget.html">Budget</a>
+                    <a href="restaurant_popular.html">Most Popular</a>
+                </div>
+            </div>
+    
+
+        </nav>
+        <div id='map'></div>
+        <script>
+
+            mapboxgl.accessToken = 'pk.eyJ1Ijoibmlra29zIiwiYSI6ImNsNndhNmJ5djJnMm4zbG9keWxxb3JvOHIifQ.ejKQ5U7gn8wNTdPTXwNICQ';
+            
+            const map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/nikkos/cl6wbo03s002u15uj4wwqffkr',
+              center: [-73.945210, 40.807521],
+              zoom: 12
+            });
+            
+            const geojson = {
+                type: 'FeatureCollection',
+                features: [
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-73.950350, 40.826390]
+                        },
+                        properties: {
+                            title: "Yolanda's Tamales",
+                            description: "Freshly-Made Tamales"
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-73.944090, 40.823510]
+                        },
+                        properties: {
+                            title: "Charles' Pan Fried Chicken",
+                            description: "Fried Chicken, Soul Food"
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-73.926422, 40.8197]
+                        },
+                        properties: {
+                            title: 'Great Wall',
+                            description: "Chinese Take-Out"
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-73.944790, 40.823560]
+                        },
+                        properties: {
+                            title: "Famous Fish Market",
+                            description: "Fried Seafood"
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-73.944950, 40.834480]
+                        },
+                        properties: {
+                            title: "La Fiesta",
+                            description: "Mexican Take-Out and Dine-In"
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-73.990925, 40.724461]
+                        },
+                        properties: {
+                            title: "Blue Ribbon",
+                            description: "Great Fried Chicken Spot"
+                        }
+                    },
+                    {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [-73.925273, 40.815651]
+                        },
+                        properties: {
+                            title: "Julias COffee",
+                            description: "Similar to the Deli"
+                        }
+                    },
+                ]
+            };
+
+            for (const feature of geojson.features) {
+            // create a HTML element for each feature
+            const el = document.createElement('div');
+            el.className = 'marker';
+
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+            .setLngLat(feature.geometry.coordinates)  
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML(`<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>` )).addTo(map);
+            }
+            
+        </script>
+    </body>
+</html>

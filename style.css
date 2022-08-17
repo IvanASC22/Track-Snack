@@ -1,0 +1,230 @@
+body {
+    background-color: #e79115;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: medium;
+} 
+
+/*nav {
+    background-color: #e79115;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.drop-element {
+    color: black;
+    background-color: #e79115;
+    font-size: 32px;
+}
+
+.about-content {
+    display: block;
+    position: absolute;
+    background-color: #e79115;
+    min-width: 100px; 
+    padding: 5px;
+}*/
+
+/* sets up navbar styling */
+nav {
+    background-color:#e79115; /* can customize this */
+    padding: 5px; /* can choose padding */
+    display: flex; /* don't change */
+    justify-content: space-around; /* don't change */
+    border: 5px solid black;
+    font-size: xx-large;
+}
+ 
+/* sets up the navbar elements, in this case, "about" */
+.drop-element {
+    color: black; /* about me text color, can change */
+    background-color: Transparent; /* changeable */
+    font-size: 32px; /* about me text size */
+}
+ 
+/* sets up the boxes for the dropdown */
+/* hides the dropdown until hovered over */
+.about-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    padding: 5px;
+}
+ 
+/* sets up the individual a links of the dropdown elements */
+.about-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+ 
+/* background color when you hover over elements */
+.about-content a:hover {
+    background-color: #e79115;
+}
+ 
+/* changes display type when hovered over
+and text size of dropdown elements */
+.dropdown:hover .about-content {
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown{
+    padding-top: 7.5px;
+
+} 
+.us{
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.us:hover {
+    background-color: black;
+    font-weight: bolder;
+    color: orange;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+
+}
+.slogan {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.big_boy{
+    background-color: #e79115;
+}
+
+#qwop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#our_desc {
+    display: flex;
+    justify-content: space-around;
+}
+
+#about_desc{
+    display: flex;
+    justify-content: space-around;
+    font-size: x-large;
+}
+
+#separator {
+    border: 3px solid black;
+    background-color: black;
+}
+
+#map{
+    height: 700px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Maceo {
+    width: 300px;
+}
+
+#Christian{
+    width: 300px;
+}
+
+#ivan{
+    width: 300px;
+}
+
+#godfrey{
+    width: 300px;
+}
+
+.marker {
+    background-image: url('mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+}
+
+#list {
+    border: 5px solid black;
+    padding-left: 10px;
+}
+
+ul {
+    list-style: none;
+    color: black;
+    text-decoration: none;
+}
+
+.neer {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.marker {
+    background-image: url('images/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .mapboxgl-popup {
+    max-width: 200px;
+  }
+  
+  .mapboxgl-popup-content {
+    text-align: center;
+  }
+
+#main_map {
+    width: 500px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+#roles {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#sep {
+    width: 75%;
+    border: 3px solid black;
+    background-color: black;
+    margin-top: 30px;
+}
+
+#slo {
+    text-align: center;
+}
+
+p {
+    font-size: larger;
+}

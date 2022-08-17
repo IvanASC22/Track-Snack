@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track & Snack</title>
+    <script defer src="script.js"></script>
+    <script src="data.js"></script> <!--Data.js is meant for the API etc.-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+</head>
+<body>
+<!--Main Menu.html is the original index.html-->
+    <!--<nav>
+        <div class="nav_bar">
+        <div class="dropdown">  
+            <div id="#big_div">
+            <a href="#" >
+                <img id ="logo" src="images/logo.png" width="100" height="132">
+            </a>
+
+           <div class="drop-element">Main Menu</div>
+
+           <div class="drop-element">Restaurants</div>
+            </div>
+
+           <div class="about-content">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+
+            <div class="drop-element">About Us</div>
+
+        </div>
+
+     </nav>
+@instructos
+    -->
+
+    <nav>
+        <a href="index.html" >
+            <img id ="logo" src="images/small.png" height="50px">
+        </a>
+        
+        <div class="dropdown">
+            <div class="drop-element"><a class="us" href="map.html">The Map</a></div>
+            
+        </div>
+
+        <div class="dropdown">
+            <div class="drop-element"><a class="us" href="about.html">About Us</a></div>
+        </div>
+
+        <div class="dropdown">    <!--Posibbly put on map page to show restaurants there-->
+            <div class="drop-element"><a class="us">Restaurants</a></div>
+            <div class="about-content">
+                <a href="restaurants_near.html">Near Me</a>
+                <a href="restaurants_expensive.html">Most Expensive</a>
+                <a href="restaurant_budget.html">Budget</a>
+                <a href="restaurant_popular.html">Most Popular</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="big_boy">
+        <div class="welcome"> 
+            <h1>Welcome to</h1>
+        </div>
+        
+        <div class="slogan">
+            <img src="images/small.png" width="250px">
+            
+            <div id="sep"></div>
+
+            <div id="slo"> 
+                <h4>The quarantine of 2020 forced many small businesses to permanently close their doors.</h4>
+                <h4>Even today, small businesses are feeling the aftershocks of the pandemic.</h4>
+                <h4>To address this problem, we created Track & Snack.</h4>
+            </div>
+        </div>
+    </div>
+    
+        <div id="map">
+            <a href="map.html"><img id="main_map" src="images/main-map.png"></a>
+            <h3>Click the map to visit the interactive map!</h3>
+        </div>
+        
+    <div>
+    <footer>
+        <p>Created by Code Gimics © 2022</p>
+    </footer>
+    </div>
+</body>
+</html>
